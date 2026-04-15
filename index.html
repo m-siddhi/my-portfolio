@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Creative Developer & Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+  <body>
+    <!-- ═══════ NAV ═══════ -->
+    <nav id="main-nav">
+      <button class="nav-logo" onclick="navigate('home')">Siddhi.</button>
+      <ul class="nav-links" id="nav-links-desktop">
+        <li><a onclick="navTo('work')" id="nav-work">Work</a></li>
+        <li><a onclick="navTo('skills')" id="nav-skills">Skills</a></li>
+        <li><a onclick="navTo('know-me')" id="nav-about">About</a></li>
+        <li><a onclick="navTo('contact')" id="nav-contact">Contact</a></li>
+      </ul>
+      <button
+        class="nav-hamburger"
+        id="nav-hamburger"
+        onclick="toggleMobileMenu()"
+        aria-label="Menu"
+      >
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- Mobile drawer -->
+    <div class="nav-mobile-menu" id="nav-mobile-menu">
+      <a
+        onclick="
+          navTo('work');
+          closeMobileMenu();
+        "
+        >Work</a
+      >
+      <a
+        onclick="
+          navTo('skills');
+          closeMobileMenu();
+        "
+        >Skills</a
+      >
+      <a
+        onclick="
+          navTo('know-me');
+          closeMobileMenu();
+        "
+        >About</a
+      >
+      <a
+        onclick="
+          navTo('contact');
+          closeMobileMenu();
+        "
+        >Contact</a
+      >
+      <div class="nav-mobile-close-hint">Tap anywhere to close</div>
+    </div>
+
+    <!-- ════════════════════════════════════
+     HOME PAGE
+════════════════════════════════════ -->
+    <div class="page active" id="page-home">
+      <!-- DRAMATIC HERO -->
+      <section class="hero">
+        <div class="hero-glow"></div>
+        <div class="hero-grid"></div>
+
+        <div class="hero-float-text">
+          Product Design · Frontend Development · UX Research
+        </div>
+
+        <div class="hero-inner">
+          <!-- Left -->
+          <div class="hero-left">
+            <div class="hero-eyebrow">
+              <span class="hero-eyebrow-dot"></span>
+              Open To Work · Mumbai-based
+            </div>
+
+            <h1 class="hero-h1">
+              <span class="hero-h1-line">Design that</span>
+              <span class="hero-h1-line">feels&nbsp;<em>right.</em></span>
+              <span class="hero-h1-line">Always.</span>
+            </h1>
+
+            <div class="hero-divider"></div>
+
+            <!-- <p class="hero-bio">
+              I'm Siddhi — a product designer and frontend developer who
+              believes good work is quiet, intentional, and honest. I craft
+              interfaces that breathe and code that holds up.
+            </p> -->
+
+            <div class="hero-cta-row">
+              <button class="btn-hero" onclick="navTo('work')"">
+                <span>View all projects</span>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+              </button>
+              <button class="btn-ghost" onclick="navTo('know-me')">
+                Know me <span class="btn-ghost-arrow">→</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right -->
+          <div class="hero-right">
+            <div class="hero-orbit">
+              <div class="orbit-ring">
+                <div class="orbit-dot"></div>
+              </div>
+              <div class="orbit-ring"></div>
+              <div class="hero-avatar-wrap">
+                <div class="hero-avatar-inner">
+                  <div class="hero-avatar-initial">S</div>
+                  <div class="hero-avatar-hint">
+                    <img src="./assets/avatar.jpg" alt="" />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Floating cards -->
+              <div class="hero-card hero-card-1">
+                <div class="card-label">Currently</div>
+                <div class="card-value">Open to Work</div>
+                <div class="card-sub">Full-time</div>
+              </div>
+              <div class="hero-card hero-card-2">
+                <div class="card-label">9 Months Experience</div>
+                <div class="card-value">UI UX Designer | Freelancer</div>
+                <div class="card-sub">Since 2025</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="hero-scroll">
+          <div class="scroll-line"></div>
+          <span>Scroll</span>
+        </div>
+      </section>
+
+      <!-- APPROACH -->
+      <section class="approach" id="approach">
+        <div class="section-label reveal">How I work</div>
+        <h2 class="section-title reveal reveal-delay-1">
+          My design process<br />in four steps.
+        </h2>
+        <div class="steps-grid">
+          <div class="step reveal reveal-delay-1">
+            <div class="step-number">01</div>
+            <h3>Understand the real problem</h3>
+            <p>
+              I start with research — user interviews, surveys and desk research
+              — before touching Figma.
+            </p>
+          </div>
+          <div class="step reveal reveal-delay-2">
+            <div class="step-number">02</div>
+            <h3>Design with purpose</h3>
+            <p>
+              Every screen, every decision connects back to a real user need. No
+              guessing.
+            </p>
+          </div>
+          <div class="step reveal reveal-delay-3">
+            <div class="step-number">03</div>
+            <h3>Build and prototype</h3>
+            <p>
+              From rough sketches to high-fidelity screens, I iterate with
+              intent — testing assumptions early, keeping feedback loops tight
+              and honest.
+            </p>
+          </div>
+          <div class="step reveal reveal-delay-4">
+            <div class="step-number">04</div>
+            <h3>Refine with feedback</h3>
+            <p>
+              I test with real users, note what breaks, and iterate until the
+              experience feels right.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- WORK -->
+      <section class="work" id="work">
+        <div class="section-label reveal">Portfolio</div>
+        <h2 class="section-title reveal reveal-delay-1">Things I've built.</h2>
+
+        <div class="portfolio-tabs reveal">
+          <button class="tab-btn active" onclick="switchTab('frontend', this)">
+            Frontend Development
+          </button>
+          <button class="tab-btn" onclick="switchTab('uiux', this)">
+            UI/UX Design
+          </button>
+          <button class="tab-btn" onclick="switchTab('uxcase', this)">
+            UX Case Studies
+          </button>
+        </div>
+
+        <!-- Frontend Tab -->
+        <div class="tab-panel active" id="tab-frontend">
+          <div class="carousel-wrapper">
+            <div class="carousel-track" id="carousel-frontend">
+              <!-- Cards injected by JS -->
+            </div>
+          </div>
+          <div class="carousel-nav">
+            <button
+              class="carousel-btn"
+              id="prev-frontend"
+              onclick="slideCarousel('frontend', -1)"
+            >
+              ←
+            </button>
+            <button
+              class="carousel-btn"
+              id="next-frontend"
+              onclick="slideCarousel('frontend', 1)"
+            >
+              →
+            </button>
+          </div>
+        </div>
+
+        <!-- UI/UX Tab -->
+        <div class="tab-panel" id="tab-uiux">
+          <div class="carousel-wrapper">
+            <div class="carousel-track" id="carousel-uiux"></div>
+          </div>
+          <div class="carousel-nav">
+            <button
+              class="carousel-btn"
+              id="prev-uiux"
+              onclick="slideCarousel('uiux', -1)"
+            >
+              ←
+            </button>
+            <button
+              class="carousel-btn"
+              id="next-uiux"
+              onclick="slideCarousel('uiux', 1)"
+            >
+              →
+            </button>
+          </div>
+        </div>
+
+        <!-- UX Case Studies Tab -->
+        <div class="tab-panel" id="tab-uxcase">
+          <div class="carousel-wrapper">
+            <div class="carousel-track" id="carousel-uxcase"></div>
+          </div>
+          <div class="carousel-nav">
+            <button
+              class="carousel-btn"
+              id="prev-uxcase"
+              onclick="slideCarousel('uxcase', -1)"
+            >
+              ←
+            </button>
+            <button
+              class="carousel-btn"
+              id="next-uxcase"
+              onclick="slideCarousel('uxcase', 1)"
+            >
+              →
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section class="skills" id="skills">
+        <div class="section-label reveal">Capabilities</div>
+        <h2 class="section-title reveal reveal-delay-1">
+          Skills I bring<br />to the table.
+        </h2>
+        <div class="skills-grid">
+          <div class="skill-group reveal">
+            <h4>UI/UX Design</h4>
+            <div class="skill-pill-wrap">
+              <span class="skill-pill highlight"
+                >UX Research & User Analysis</span
+              >
+              <span class="skill-pill highlight">Wireframing & User Flows</span>
+              <span class="skill-pill highlight">High-Fidelity UI Design</span>
+              <span class="skill-pill highlight">Prototyping</span>
+              <span class="skill-pill highlight"
+                >Design Systems & Component Libraries</span
+              >
+              <span class="skill-pill highlight"
+                >Usability & Accessibility</span
+              >
+            </div>
+          </div>
+          <div class="skill-group reveal reveal-delay-1">
+            <h4>Visual Design & Marketing</h4>
+            <div class="skill-pill-wrap">
+              <span class="skill-pill highlight"
+                >Visual Design & Layout Composition</span
+              >
+              <span class="skill-pill highlight"
+                >Typography & Color Theory</span
+              >
+              <span class="skill-pill highlight"
+                >Visual Hierarchy & Branding</span
+              >
+              <span class="skill-pill highlight"
+                >UI Elements, Icons & Interactive Components</span
+              >
+              <span class="skill-pill highlight"
+                >Email Creatives & Marketing Visuals</span
+              >
+              <span class="skill-pill highlight"
+                >Brand Communication Design</span
+              >
+            </div>
+          </div>
+          <div class="skill-group reveal reveal-delay-2">
+            <h4>Frontend Development</h4>
+            <div class="skill-pill-wrap">
+              <span class="skill-pill highlight">HTML, CSS, JavaScript</span>
+              <span class="skill-pill highlight">Responsive Web Design</span>
+              <span class="skill-pill highlight"
+                >Basic UI Interactions & DOM Manipulation</span
+              >
+            </div>
+          </div>
+          <div class="skill-group reveal">
+            <h4>CMS & Backend Basics</h4>
+            <div class="skill-pill-wrap">
+              <span class="skill-pill highlight"
+                >WordPress (Theme Customization, Content Management)</span
+              >
+              <span class="skill-pill highlight">Basic PHP Knowledge</span>
+            </div>
+          </div>
+          <div class="skill-group reveal reveal-delay-1">
+            <h4>Tools & Software</h4>
+            <div class="skill-pill-wrap">
+              <span class="skill-pill highlight">Figma</span>
+              <span class="skill-pill highlight">Framer</span>
+              <span class="skill-pill highlight">FigJam</span>
+              <span class="skill-pill highlight">Miro</span>
+              <span class="skill-pill highlight">Canva</span>
+              <span class="skill-pill highlight">Adobe Photoshop</span>
+              <span class="skill-pill highlight">Adobe Illustrator</span>
+              <span class="skill-pill highlight">Adobe XD</span>
+            </div>
+          </div>
+          <div class="skill-group reveal reveal-delay-2">
+            <h4>AI Tools</h4>
+            <div class="skill-pill-wrap">
+              <span class="skill-pill highlight">Figma AI</span>
+              <span class="skill-pill highlight">Claude AI</span>
+              <span class="skill-pill highlight">Google Gemini</span>
+              <span class="skill-pill highlight">ChatGPT</span>
+              <span class="skill-pill highlight">DALL·E</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- KNOW ME -->
+      <section class="knowme" id="know-me">
+        <div class="section-label reveal">Know me</div>
+        <h2 class="section-title reveal reveal-delay-1">
+          Where I've been<br />and what I've done.
+        </h2>
+        <div class="knowme-grid">
+          <div>
+            <p
+              style="
+                font-size: 0.7rem;
+                letter-spacing: 0.14em;
+                text-transform: uppercase;
+                color: var(--stone);
+                margin-bottom: 1.5rem;
+                margin-top: 2.5rem;
+              "
+              class="reveal"
+            >
+              Experience
+            </p>
+            <div class="experience-list">
+              <div class="exp-item reveal">
+                <div class="exp-year">2025 – Now</div>
+                <div class="exp-content">
+                  <h4>Freelance UI and Visual Designer</h4>
+                  <div class="exp-company">Remote</div>
+                  <p>
+                    Designing high fidelity screens using Figma and Framer and
+                    even worked on social brands and School Creativity using
+                    Canva & Photoshop.
+                  </p>
+                </div>
+              </div>
+              <div class="exp-item reveal reveal-delay-1">
+                <div class="exp-year">2025</div>
+                <div class="exp-content">
+                  <h4>Frontend Developer</h4>
+                  <div class="exp-company">
+                    Prasuk Jain Hospitality and Ventures · Lower Parel, Mumbai
+                  </div>
+                  <p>
+                    Developed websites using Wordpress for hospitality and
+                    entertainment brands. Built responsive websites improving
+                    mobile usability and load performance. Collaborated with
+                    developers, testers and marketing teams to finalize design
+                    flows and visual elements.Managed multiple design tasks
+                    while maintaining consistency, usability and deadlines.
+                  </p>
+                </div>
+              </div>
+              <!-- <div class="exp-item reveal reveal-delay-2">
+                <div class="exp-year">2021 – 2022</div>
+                <div class="exp-content">
+                  <h4>Junior Designer</h4>
+                  <div class="exp-company">Agency Name · Remote</div>
+                  <p>
+                    Worked on brand identities, landing pages, and mobile apps.
+                    Got my hands dirty in everything from research to handoff.
+                  </p>
+                </div>
+              </div> -->
+            </div>
+          </div>
+          <div>
+            <p
+              style="
+                font-size: 0.7rem;
+                letter-spacing: 0.14em;
+                text-transform: uppercase;
+                color: var(--stone);
+                margin-bottom: 1.5rem;
+                margin-top: 2.5rem;
+              "
+              class="reveal"
+            >
+              Education
+            </p>
+            <div class="education-list">
+              <div class="exp-item reveal">
+                <div class="exp-year">2024</div>
+                <div class="exp-content">
+                  <h4>BE in Computer Science Engineering</h4>
+                  <div class="exp-company">
+                    Armiet College of Engineering, Thane
+                  </div>
+                  <!-- <p>
+                    Studied the intersection of human behaviour and digital
+                    product design. Graduated with distinction.
+                  </p> -->
+                </div>
+              </div>
+              <div class="exp-item reveal reveal-delay-1">
+                <div class="exp-year">2021</div>
+                <div class="exp-content">
+                  <h4>Diploma in Computer Science Engineering</h4>
+                  <div class="exp-company">Pravin Patil Polytechnic, Thane</div>
+                  <!-- <p>
+                    Deep dived into React, TypeScript, and animation libraries
+                    to bridge the gap between design and real code.
+                  </p> -->
+                </div>
+              </div>
+              <!-- <div class="exp-item reveal reveal-delay-2">
+                <div class="exp-year">Ongoing</div>
+                <div class="exp-content">
+                  <h4>Design Systems & Accessibility</h4>
+                  <div class="exp-company">Independent Study</div>
+                  <p>
+                    Continuously learning from the best — Figma's blog, A List
+                    Apart, Smashing Magazine, and building in public.
+                  </p>
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="contact" id="contact">
+        <div class="section-label reveal">Hire Me!</div>
+        <h2
+          class="section-title reveal reveal-delay-1"
+          style="margin-top: 0.5rem"
+        >
+          Let's get in touch.
+        </h2>
+        <a
+          href="mailto:manjrekarsiddhi72@gmail.com"
+          class="contact-email reveal reveal-delay-2"
+          ><span
+            class="__cf_email__"
+            data-cfemail="d5bdb0b9b9ba95a6bcb1b1bdbcfbb1b0a6bcb2bb"
+            >manjrekarsiddhi72@gmail.com</span
+          ></a
+        >
+        <!-- <div class="social-links reveal reveal-delay-3">
+          <a href="#" class="social-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+              />
+            </svg>
+            LinkedIn
+          </a>
+          <a href="#" class="social-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+              />
+            </svg>
+            GitHub
+          </a>
+          <a href="#" class="social-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+              />
+            </svg>
+            Twitter / X
+          </a>
+        </div> -->
+        <a
+          href="https://www.linkedin.com/in/siddhi-manjrekar-889490300/"
+          class="linkedin-banner reveal reveal-delay-4"
+        >
+          <div class="li-logo">
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+              />
+            </svg>
+          </div>
+          <div class="li-text">
+            <h4>Siddhi — LinkedIn Profile</h4>
+            <p>View my full professional profile and recommendations</p>
+          </div>
+          <div class="li-arrow">↗</div>
+        </a>
+      </section>
+
+      <footer style="background: var(--ink); color: var(--stone-light)">
+        <span>© 2025 Siddhi. Made with care.</span>
+        <span style="color: rgba(179, 165, 152, 0.5)"
+          >Design &amp; Development</span
+        >
+      </footer>
+    </div>
+    <!-- /page-home -->
+
+    <!-- ========== PROJECT MODAL (body-level, outside all pages) ========== -->
+    <div class="modal-overlay" id="projectModal" onclick="closeModal(event)">
+      <div class="modal" id="modalContent"></div>
+    </div>
+
+    <!-- Custom cursor -->
+    <div id="cursor" class="cursor"></div>
+    <div id="cursorRing" class="cursor-ring"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
