@@ -1,37 +1,63 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- SEO -->
-  <title>Siddhi Manjrekar | Frontend Developer & UI/UX Designer</title>
-  <meta name="description" content="Frontend Developer & UI/UX Designer specializing in responsive, user-friendly web experiences using React, JavaScript, and modern design principles." />
-  <meta name="keywords" content="Frontend Developer, UI UX Designer, React Developer, Portfolio, Web Developer, Siddhi Manjrekar" />
-  <meta name="author" content="Siddhi Manjrekar" />
+    <!-- SEO -->
+    <title>Siddhi Manjrekar | Frontend Developer & UI/UX Designer</title>
+    <meta
+      name="description"
+      content="Frontend Developer & UI/UX Designer specializing in responsive, user-friendly web experiences using React, JavaScript, and modern design principles."
+    />
+    <meta
+      name="keywords"
+      content="Frontend Developer, UI UX Designer, React Developer, Portfolio, Web Developer, Siddhi Manjrekar"
+    />
+    <meta name="author" content="Siddhi Manjrekar" />
 
-  <!-- Open Graph (for WhatsApp, LinkedIn, Facebook) -->
-  <meta property="og:title" content="Siddhi Manjrekar | Portfolio" />
-  <meta property="og:description" content="Explore my work as a Frontend Developer & UI/UX Designer. Clean, responsive, and user-focused designs." />
-  <meta property="og:image" content="/assets/poster.png" />
-  <meta property="og:url" content="https://siddhi-portfolio-8.vercel.app" />
-  <meta property="og:type" content="website" />
+    <!-- Open Graph (for WhatsApp, LinkedIn, Facebook) -->
+    <meta property="og:title" content="Siddhi Manjrekar | Portfolio" />
+    <meta
+      property="og:description"
+      content="Explore my work as a Frontend Developer & UI/UX Designer. Clean, responsive, and user-focused designs."
+    />
+    <meta
+      property="og:image"
+      content="https://siddhi-portfolio-8.vercel.app/assets/poster.png"
+    />
+    <meta property="og:url" content="https://siddhi-portfolio-8.vercel.app" />
+    <meta property="og:type" content="website" />
 
-  <!-- Twitter Preview -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Siddhi Manjrekar | Portfolio" />
-  <meta name="twitter:description" content="Frontend Developer & UI/UX Designer portfolio showcasing projects and skills." />
-  <meta name="twitter:image" content="/assets/poster.png" />
+    <!-- Twitter Preview -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Siddhi Manjrekar | Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Frontend Developer & UI/UX Designer portfolio showcasing projects and skills."
+    />
+    <meta
+      name="twitter:image"
+      content="https://siddhi-portfolio-8.vercel.app/assets/poster.png"
+    />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=DM+Sans:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
 
-<link rel="preload" href="style.css" as="style" onload="this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="style.css"></noscript>
-</head>
+    <link
+      rel="preload"
+      href="style.css"
+      as="style"
+      onload="this.rel = 'stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="style.css" /></noscript>
+  </head>
   <body>
     <!-- ═══════ NAV ═══════ -->
     <nav id="main-nav">
@@ -121,7 +147,7 @@
             </p> -->
 
             <div class="hero-cta-row">
-              <button class="btn-hero" onclick="navTo('work')"">
+              <button class="btn-hero" onclick="navTo('work')">
                 <span>View all projects</span>
                 <svg
                   width="14"
@@ -151,7 +177,15 @@
                 <div class="hero-avatar-inner">
                   <div class="hero-avatar-initial">S</div>
                   <div class="hero-avatar-hint">
-                    <img src="./assets/avatar.jpg" alt="" />
+                    <img
+                      src="./assets/avatar.jpg"
+                      width="120"
+                      height="120"
+                      alt="Siddhi avatar"
+                      loading="lazy"
+                      width="120"
+                      height="120"
+                    />
                   </div>
                 </div>
               </div>
@@ -567,6 +601,8 @@
         </div> -->
         <a
           href="https://www.linkedin.com/in/siddhi-manjrekar-889490300/"
+          target="_blank"
+          rel="noopener noreferrer"
           class="linkedin-banner reveal reveal-delay-4"
         >
           <div class="li-logo">
@@ -602,6 +638,6 @@
     <div id="cursor" class="cursor"></div>
     <div id="cursorRing" class="cursor-ring"></div>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>
