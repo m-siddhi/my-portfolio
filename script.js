@@ -328,13 +328,13 @@ function updateNavTheme(page) {
   }
 }
 
-function syncNavToScroll() {
-  const nav = document.getElementById("main-nav");
-  const hero = document.querySelector(".hero");
-  if (!hero) return;
-  const heroBottom = hero.offsetTop + hero.offsetHeight;
-  nav.classList.toggle("dark", window.scrollY < heroBottom - 80);
-}
+// function syncNavToScroll() {
+//   const nav = document.getElementById("main-nav");
+//   const hero = document.querySelector(".hero");
+//   if (!hero) return;
+//   const heroBottom = hero.offsetTop + hero.offsetHeight;
+//   nav.classList.toggle("dark", window.scrollY < heroBottom - 80);
+// }
 
 function setActiveNavLink(page) {
   document
